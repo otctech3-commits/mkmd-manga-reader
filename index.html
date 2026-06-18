@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>MKMD Manga - Read Free Manga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <a href="/" class="logo">
+        <i class="fa-solid fa-book-open"></i>
+        <span>MKMD</span>
+      </a>
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Search 100,000+ manga...">
+      </div>
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Read Manga <span class="gradient-text">Without Limits</span></h1>
+      <p>Powered by MangaDex • 100k+ titles • No ads • Free forever</p>
+    </section>
+
+    <section class="filters">
+      <button class="filter-btn active" data-filter="popular">🔥 Popular</button>
+      <button class="filter-btn" data-filter="latest">⚡ Latest</button>
+      <button class="filter-btn" data-filter="rating">⭐ Top Rated</button>
+      <button class="filter-btn" data-filter="completed">✓ Completed</button>
+    </section>
+
+    <div class="loading" id="loading">
+      <div class="spinner"></div>
+      <p>Loading manga...</p>
+    </div>
+
+    <div class="manga-grid" id="mangaGrid"></div>
+
+    <div class="load-more" id="loadMore" style="display:none;">
+      <button class="btn-load">Load More</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Powered by <a href="https://mangadex.org" target="_blank">MangaDex API</a> • Made with ❤️</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
