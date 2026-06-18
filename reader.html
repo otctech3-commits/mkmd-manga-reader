@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title id="pageTitle">Reading - MKMD Manga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="reader-body">
+  <div class="reader-header" id="readerHeader">
+    <div class="reader-nav">
+      <a href="/" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+      <div class="manga-info">
+        <h2 id="mangaTitle">Loading...</h2>
+        <p id="chapterTitle"></p>
+      </div>
+      <div class="reader-controls">
+        <button class="control-btn" id="prevChapter" title="Previous Chapter">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <select class="chapter-select" id="chapterSelect"></select>
+        <button class="control-btn" id="nextChapter" title="Next Chapter">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <button class="control-btn" id="settingsBtn" title="Settings">
+          <i class="fa-solid fa-gear"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="settings-panel" id="settingsPanel">
+    <h3>Reader Settings</h3>
+    <div class="setting-group">
+      <label>Reading Mode</label>
+      <div class="btn-group">
+        <button class="mode-btn active" data-mode="vertical">Vertical</button>
+        <button class="mode-btn" data-mode="horizontal">Horizontal</button>
+      </div>
+    </div>
+    <div class="setting-group">
+      <label>Image Quality</label>
+      <select id="qualitySelect">
+        <option value="data">High</option>
+        <option value="data-saver">Data Saver</option>
+      </select>
+    </div>
+    <div class="setting-group">
+      <label>Page Gap</label>
+      <input type="range" id="gapSlider" min="0" max="50" value="10">
+    </div>
+  </div>
+
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="spinner"></div>
+    <p>Loading chapter pages...</p>
+  </div>
+
+  <div class="reader-container" id="readerContainer"></div>
+
+  <div class="page-indicator" id="pageIndicator">1 / 1</div>
+
+  <div class="reader-footer">
+    <button class="nav-btn" id="prevBtn"><i class="fa-solid fa-arrow-left"></i> Previous</button>
+    <span id="progressText">Page 1 of 1</span>
+    <button class="nav-btn" id="nextBtn">Next <i class="fa-solid fa-arrow-right"></i></button>
+  </div>
+
+  <script src="reader.js"></script>
+</body>
+</html>
